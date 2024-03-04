@@ -1,0 +1,31 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create('bandas', function (Blueprint $table) {
+            $table->id();
+            $table->string('nome_bd');
+            $table->string('foto_bd');
+            $table->integer('albuns_qtd')->default(0);
+            $table->timestamps();
+
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('bandas');
+    }
+};
