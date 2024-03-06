@@ -35,18 +35,17 @@ Route::POST('/banda/update', [BandController::class, 'updateBanda'])->name('band
 
 //Albuns Controller
 
-//Route::get('/albuns/banda/{id}', [AlbumController::class, 'allAlbum'])->name('albuns.view');
+Route::get('/albuns/banda/{id}', [AlbumController::class, 'allAlbum'])->name('albuns.view'); //view de todos os albuns da banda
 
-Route::get('/albuns/add', [AlbumController::class, 'addAlbum'])->name('albuns.add-album');
+Route::get('/albuns/add', [AlbumController::class, 'addAlbum'])->name('albuns.add-album'); //view para adicionar e atribuir para uma banda
 
-Route::post('/albuns/create', [AlbumController::class, 'createAlbum'])->name('albuns.createAlbum');
+Route::post('/albuns/create', [AlbumController::class, 'createAlbum'])->name('albuns.createAlbum'); //view que chama a função de criar o album
 
-Route::post('/albuns/update', [AlbumController::class, 'updateAlbum'])->name('albuns.update');
+Route::post('/albuns/update', [AlbumController::class, 'updateAlbum'])->name('albuns.update'); //view para chamar a função de atualizar um album
 
-Route::get('/albuns/view/{id}', [AlbumController::class, 'viewAlbuns']
-)->name('albuns.view');
+Route::get('/albuns/view/{id}', [AlbumController::class, 'viewAlbuns'])->name('album.viewUp'); //view para clicar no album NOT WORKKING*****////
 
-Route::get('/albuns/delete/{id}', [AlbumController::class, 'deleteAlbum'])->name('albuns.delete');
+Route::get('/albuns/delete/{id}', [AlbumController::class, 'deleteAlbum'])->name('albuns.delete'); //deletar albuns
 
 
 //Route::get('/', [AlbumController::class, ''])->name('');

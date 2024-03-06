@@ -2,8 +2,9 @@
 @section('content')
     <main class="container">
 
+        <h2>Visualizar albuns</h2>
 
-        <div class="">
+        <div class="container">
             <form method="GET" class="form-inline w-1">
                 <div class="input-group">
                     <input type="search" value="" name="search" id="" class="form-control mr-sm-2" placeholder="Search" aria-label="Search">
